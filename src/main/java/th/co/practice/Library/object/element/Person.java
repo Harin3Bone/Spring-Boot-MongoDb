@@ -10,7 +10,6 @@ public class Person {
     private String lastName;
     private String identity;
     private String password;
-    private PersonLevel level;
 
     public UUID getUuid() {
         return uuid;
@@ -52,24 +51,15 @@ public class Person {
         this.password = password;
     }
 
-    public PersonLevel getLevel() {
-        return level;
-    }
-
-    public void setLevel(PersonLevel level) {
-        this.level = level;
-    }
-
     public Person(){
 
     }
 
-    public Person(UUID uuid, String firstName, String lastName, String identity, String password, PersonLevel level) {
+    public Person(UUID uuid, String firstName, String lastName, String identity, String password) {
         this.uuid = uuid;
         this.firstName = firstName;
         this.lastName = lastName;
         this.identity = identity;
         this.password = password;
-        this.level = level;
     }
 }
