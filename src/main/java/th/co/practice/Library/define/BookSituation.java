@@ -1,4 +1,4 @@
-package th.co.practice.Library.object.define;
+package th.co.practice.Library.define;
 
 public enum BookSituation {
     Borrow,

@@ -1,7 +1,7 @@
-package th.co.practice.Library.object.element;
+package th.co.practice.Library.object;
 
-import th.co.practice.Library.object.define.BookCategory;
-import th.co.practice.Library.object.define.BookSituation;
+import th.co.practice.Library.define.BookCategory;
+import th.co.practice.Library.define.BookSituation;
 
 import java.time.LocalDate;
 import java.util.UUID;

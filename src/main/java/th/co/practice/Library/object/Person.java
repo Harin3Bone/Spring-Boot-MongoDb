@@ -1,6 +1,4 @@
-package th.co.practice.Library.object.element;
-
-import th.co.practice.Library.object.define.PersonLevel;
+package th.co.practice.Library.object;
 
 import java.util.UUID;
 
