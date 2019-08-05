@@ -15,8 +15,9 @@ public class MongodbConfig {
         return new CommandLineRunner() {
             @Override
             public void run(String... args) throws Exception {
-                bookRepository.save(new BookS(1,"Iron Man","Stan Lee",123L));
-                bookRepository.save(new BookS(2,"Captain America","Stan Lee",234L));
+//                bookRepository.save(new BookS(1,"Iron Man","Stan Lee",123L));
+//                bookRepository.save(new BookS(2,"Captain America","Stan Lee",234L));
+                bookRepository.save(new BookS(3,"Thor","Stan Lee",345L));
             }
         };
     }
