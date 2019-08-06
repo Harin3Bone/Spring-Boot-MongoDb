@@ -5,7 +5,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-public class Hello {
+public class GetStart {
 
     @GetMapping("/")
     public String index(){
@@ -20,6 +20,11 @@ public class Hello {
     @GetMapping("/double")
     public double doubles(){
         return 5.3d;
+    }
+
+    @GetMapping("/thanks")
+    public String thanks(){
+        return "Thank you";
     }
 
 }

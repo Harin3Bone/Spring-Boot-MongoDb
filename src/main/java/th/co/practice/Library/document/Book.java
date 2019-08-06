@@ -1,5 +1,7 @@
 package th.co.practice.Library.document;
 
+import lombok.Getter;
+import lombok.Setter;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 import th.co.practice.Library.specific.BookCategory;
@@ -8,7 +10,8 @@ import th.co.practice.Library.specific.BookStatus;
 import javax.validation.constraints.NotNull;
 import java.util.UUID;
 
-@Document
+@Getter
+@Setter
 public class Book {
     @Id
     private UUID uuid;
@@ -27,54 +30,6 @@ public class Book {
 
     @NotNull
     private BookStatus bookStatus;
-
-    public UUID getUuid() {
-        return uuid;
-    }
-
-    public void setUuid(UUID uuid) {
-        this.uuid = uuid;
-    }
-
-    public String getBookName() {
-        return bookName;
-    }
-
-    public void setBookName(String bookName) {
-        this.bookName = bookName;
-    }
-
-    public BookCategory getBookCategory() {
-        return bookCategory;
-    }
-
-    public void setBookCategory(BookCategory bookCategory) {
-        this.bookCategory = bookCategory;
-    }
-
-    public String getBookCode() {
-        return bookCode;
-    }
-
-    public void setBookCode(String bookCode) {
-        this.bookCode = bookCode;
-    }
-
-    public String getBookAuthor() {
-        return bookAuthor;
-    }
-
-    public void setBookAuthor(String bookAuthor) {
-        this.bookAuthor = bookAuthor;
-    }
-
-    public BookStatus getBookStatus() {
-        return bookStatus;
-    }
-
-    public void setBookStatus(BookStatus bookStatus) {
-        this.bookStatus = bookStatus;
-    }
 
     public Book(){
 
