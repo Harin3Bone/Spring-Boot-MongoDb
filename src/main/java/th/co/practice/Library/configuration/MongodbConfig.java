@@ -20,7 +20,7 @@ import java.util.UUID;
 @Configuration
 public class MongodbConfig {
     @Bean
-    CommandLineRunner  commandLineRunner (BookRepository bookRepository){
+    CommandLineRunner  bookRepositoryRunner (BookRepository bookRepository){
         return new CommandLineRunner() {
             @Override
             public void run(String... args) throws Exception {
@@ -32,7 +32,7 @@ public class MongodbConfig {
     }
 
     @Bean
-    CommandLineRunner  commandLineRunner (LibrarianRepository librarianRepository){
+    CommandLineRunner  librarianRepositoryRunner (LibrarianRepository librarianRepository){
         return new CommandLineRunner() {
             @Override
             public void run(String... args) throws Exception {
@@ -44,7 +44,7 @@ public class MongodbConfig {
     }
 
     @Bean
-    CommandLineRunner commandLineRunner (CustomerRepository customerRepository){
+    CommandLineRunner customerRepositoryRunner (CustomerRepository customerRepository){
         return new CommandLineRunner() {
             @Override
             public void run(String... args) throws Exception {
