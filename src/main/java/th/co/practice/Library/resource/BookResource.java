@@ -3,7 +3,7 @@ package th.co.practice.Library.resource;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import th.co.practice.Library.document.BookS;
+import th.co.practice.Library.document.Book;
 import th.co.practice.Library.repository.BookRepository;
 
 import java.util.List;
@@ -18,7 +18,7 @@ public class BookResource {
     }
 
     @GetMapping("/all")
-    public List<BookS> getAll(){
+    public List<Book> bookAll(){
         return bookRepository.findAll();
     }
 }

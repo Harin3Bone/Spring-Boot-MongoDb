@@ -1,12 +1,12 @@
-package th.co.practice.Library.object;
+package th.co.practice.Library.document;
 
 import java.util.UUID;
 
 public class Person {
-    private UUID uuid = UUID.randomUUID();
+    private UUID uuid;
     private String firstName;
     private String lastName;
-    private String identity;
+    private String username;
     private String password;
 
     public UUID getUuid() {
@@ -33,12 +33,12 @@ public class Person {
         this.lastName = lastName;
     }
 
-    public String getIdentity() {
-        return identity;
+    public String getUsername() {
+        return username;
     }
 
-    public void setIdentity(String identity) {
-        this.identity = identity;
+    public void setUsername(String username) {
+        this.username = username;
     }
 
     public String getPassword() {
@@ -53,11 +53,11 @@ public class Person {
 
     }
 
-    public Person(UUID uuid, String firstName, String lastName, String identity, String password) {
+    public Person(UUID uuid, String firstName, String lastName, String username, String password) {
         this.uuid = uuid;
         this.firstName = firstName;
         this.lastName = lastName;
-        this.identity = identity;
+        this.username = username;
         this.password = password;
     }
 }

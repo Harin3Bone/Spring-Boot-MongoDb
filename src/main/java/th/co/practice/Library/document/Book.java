@@ -1,17 +1,18 @@
-package th.co.practice.Library.object;
+package th.co.practice.Library.document;
 
-import th.co.practice.Library.define.BookCategory;
-import th.co.practice.Library.define.BookStatus;
+import org.springframework.data.mongodb.core.mapping.Document;
+import th.co.practice.Library.specific.BookCategory;
+import th.co.practice.Library.specific.BookStatus;
 
 import java.util.UUID;
 
+@Document
 public class Book {
-    private UUID uuid = UUID.randomUUID();
+    private UUID uuid;
     private String bookName;
-    private String bookCode;
     private BookCategory bookCategory;
+    private String bookCode;
     private String bookAuthor;
-    private String bookAbstract;
     private BookStatus bookStatus;
 
     public UUID getUuid() {
@@ -30,14 +31,6 @@ public class Book {
         this.bookName = bookName;
     }
 
-    public String getBookCode() {
-        return bookCode;
-    }
-
-    public void setBookCode(String bookCode) {
-        this.bookCode = bookCode;
-    }
-
     public BookCategory getBookCategory() {
         return bookCategory;
     }
@@ -46,20 +39,20 @@ public class Book {
         this.bookCategory = bookCategory;
     }
 
+    public String getBookCode() {
+        return bookCode;
+    }
+
+    public void setBookCode(String bookCode) {
+        this.bookCode = bookCode;
+    }
+
     public String getBookAuthor() {
         return bookAuthor;
     }
 
     public void setBookAuthor(String bookAuthor) {
         this.bookAuthor = bookAuthor;
-    }
-
-    public String getBookAbstract() {
-        return bookAbstract;
-    }
-
-    public void setBookAbstract(String bookAbstract) {
-        this.bookAbstract = bookAbstract;
     }
 
     public BookStatus getBookStatus() {
@@ -74,14 +67,12 @@ public class Book {
 
     }
 
-    public Book(UUID uuid, String bookName, String bookCode, BookCategory bookCategory, String bookAuthor,
-                String bookAbstract, BookStatus bookStatus) {
+    public Book(UUID uuid, String bookName, BookCategory bookCategory, String bookCode, String bookAuthor, BookStatus bookStatus) {
         this.uuid = uuid;
         this.bookName = bookName;
-        this.bookCode = bookCode;
         this.bookCategory = bookCategory;
+        this.bookCode = bookCode;
         this.bookAuthor = bookAuthor;
-        this.bookAbstract = bookAbstract;
         this.bookStatus = bookStatus;
     }
 }
