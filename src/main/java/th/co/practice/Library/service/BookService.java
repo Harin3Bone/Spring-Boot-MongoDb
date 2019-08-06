@@ -1,4 +1,4 @@
-package th.co.practice.Library.resource;
+package th.co.practice.Library.service;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -10,10 +10,10 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/res/book")
-public class BookResource {
+public class BookService {
     private BookRepository bookRepository;
 
-    public BookResource(BookRepository bookRepository){
+    public BookService(BookRepository bookRepository){
         this.bookRepository = bookRepository;
     }
 

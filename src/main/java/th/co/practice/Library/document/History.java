@@ -1,20 +1,38 @@
 package th.co.practice.Library.document;
 
+import org.springframework.data.annotation.Id;
 import th.co.practice.Library.specific.BookCategory;
 import th.co.practice.Library.specific.BookSituation;
 
+import javax.validation.constraints.NotNull;
 import java.time.LocalDate;
 import java.util.UUID;
 
 public class History {
+    @Id
     private UUID uuid;
+
+    @NotNull
     private String bookName;
+
+    @NotNull
     private BookCategory bookCategory;
+
+    @NotNull
     private String bookCode;
+
+    @NotNull
     private String bookAuthor;
+
+    @NotNull
     private BookSituation bookSituation;
+
+    @NotNull
     private String librarianName;
+
+    @NotNull
     private String customerName;
+
     private LocalDate borrowDate;
     private LocalDate returnDate;
 

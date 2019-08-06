@@ -1,4 +1,4 @@
-package th.co.practice.Library.resource;
+package th.co.practice.Library.service;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -10,10 +10,10 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/res/customer")
-public class CustomerResource {
+public class CustomerService {
     private CustomerRepository customerRepository;
 
-    public CustomerResource(CustomerRepository customerRepository){
+    public CustomerService(CustomerRepository customerRepository){
         this.customerRepository = customerRepository;
     }
 

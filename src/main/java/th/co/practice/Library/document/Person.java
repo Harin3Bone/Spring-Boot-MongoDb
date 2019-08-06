@@ -1,12 +1,24 @@
 package th.co.practice.Library.document;
 
+import org.springframework.data.annotation.Id;
+
+import javax.validation.constraints.NotNull;
 import java.util.UUID;
 
 public class Person {
+    @Id
     private UUID uuid;
+
+    @NotNull
     private String firstName;
+
+    @NotNull
     private String lastName;
+
+    @NotNull
     private String username;
+
+    @NotNull
     private String password;
 
     public UUID getUuid() {

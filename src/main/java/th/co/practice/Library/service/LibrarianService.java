@@ -1,4 +1,4 @@
-package th.co.practice.Library.resource;
+package th.co.practice.Library.service;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -10,10 +10,10 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/res/librarian")
-public class LibrarianResource {
+public class LibrarianService {
     private LibrarianRepository librarianRepository;
 
-    public LibrarianResource(LibrarianRepository librarianRepository){
+    public LibrarianService(LibrarianRepository librarianRepository){
         this.librarianRepository = librarianRepository;
     }
 
@@ -21,6 +21,5 @@ public class LibrarianResource {
     public List<Librarian> libraAll(){
         return librarianRepository.findAll();
     }
-
 
 }
